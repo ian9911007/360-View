@@ -846,7 +846,7 @@
     }
 
     // --- 新增：預設全景圖自動載入邏輯 ---
-    const DEFAULT_PANORAMA_URL = "https://upload.wikimedia.org/wikipedia/commons/1/12/Equirectangular_projection_of_the_garden_of_the_Villa_Borghese_in_Rome.jpg";
+    const DEFAULT_PANORAMA_URL = "./DJI_20260716134302_0003_D.jpeg";
 
     window.addEventListener("DOMContentLoaded", async () => {
       try {
@@ -854,7 +854,6 @@
         els.status.style.display = "block";
 
         const img = new Image();
-        img.crossOrigin = "anonymous";
         img.src = DEFAULT_PANORAMA_URL;
         await img.decode();
         const d = { width: img.naturalWidth, height: img.naturalHeight };
@@ -879,11 +878,11 @@
         els.toolbar.style.display = "flex";
         
         const summary = {
-          檔名: "Villa Borghese (Wikimedia)",
+          檔名: "DJI_20260716134302_0003_D.jpeg",
           格式: "image/jpeg",
           尺寸: `${d.width} × ${d.height}`,
           比例: (d.width / d.height).toFixed(4),
-          是否為2比1: "是"
+          是否為2比1: Math.abs(d.width / d.height - 2) <= .01 ? "是" : "否"
         };
         els.meta.innerHTML = Object.entries(summary)
           .map(([k, v]) => `<div class="meta-key">${k}</div><div class="meta-val">${v}</div>`)
