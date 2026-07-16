@@ -846,7 +846,7 @@
     }
 
     // --- 新增：預設全景圖自動載入邏輯 ---
-    const DEFAULT_PANORAMA_URL = "./DJI_20260716134302_0003_D.jpeg";
+    const DEFAULT_PANORAMA_URL = "./photo.jpeg";
 
     window.addEventListener("DOMContentLoaded", async () => {
       try {
@@ -878,7 +878,7 @@
         els.toolbar.style.display = "flex";
         
         const summary = {
-          檔名: "DJI_20260716134302_0003_D.jpeg",
+          檔名: "photo.jpeg",
           格式: "image/jpeg",
           尺寸: `${d.width} × ${d.height}`,
           比例: (d.width / d.height).toFixed(4),
