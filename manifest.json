@@ -1,6 +1,6 @@
 {
-  "name": "360-View",
-  "short_name": "360-View",
+  "name": "360 View",
+  "short_name": "360 View",
   "start_url": "./",
   "scope": "./",
   "display": "fullscreen",

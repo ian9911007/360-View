@@ -9,7 +9,7 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="theme-color" content="#000000" />
   <link rel="manifest" href="./manifest.json" />
-  <title>360-View</title>
+  <title>360 View</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core@5.14.3/index.css" />
   <style>
     :root {
@@ -443,7 +443,7 @@
 
   <div id="startScreen">
     <div id="panel">
-      <h1>360-View</h1>
+      <h1>360 View</h1>
       <p>選擇一張 2:1 等距柱狀全景圖。圖片只在目前瀏覽器本機處理，不會上傳。</p>
       <label id="chooseButton" class="primary" for="fileInput">選擇全景圖片</label>
       <div id="dropHint">Mac 可直接拖放 JPEG、PNG、WebP、HEIC</div>
@@ -754,7 +754,7 @@
 
     $("#shareButton").addEventListener("click", async () => {
       try {
-        if (navigator.share) await navigator.share({ title: "360-View", text: "360 全景瀏覽器", url: location.href });
+        if (navigator.share) await navigator.share({ title: "360 View", text: "360 全景瀏覽器", url: location.href });
         else { await navigator.clipboard.writeText(location.href); toast("網站網址已複製"); }
       } catch { }
     });
